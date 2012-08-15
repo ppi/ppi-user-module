@@ -13,7 +13,8 @@
     ],
     "target-dir": "modules/User",
     "require": {
-        "ppi/zendframework": "2.0.*@beta"
+        "ppi/zendframework": "2.0.*@beta",
+	"swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
     },
     "repositories": [
         {
