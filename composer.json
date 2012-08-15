@@ -13,25 +13,9 @@
     ],
     "target-dir": "modules/User",
     "require": {
-        "ppi/zendframework": "2.0.*@beta",
-	"swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
+		"ppi/framework": "dev-master",
+        "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "ppi/zendframework",
-                "version": "2.0.0-beta5",
-                "dist": {
-                    "url": "http://packages.zendframework.com/releases/ZendFramework-2.0.0beta5/ZendFramework-2.0.0beta5-minimal.zip",
-                    "type": "zip"
-                },
-                "autoload": {
-                    "psr-0": { "Zend": "library" }
-                }
-            }
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
