@@ -1,1 +1,13 @@
-a
+{
+    "name": "ppi/user-module",
+    "description": "The PPI Framework User Module",
+    "homepage": "http://www.ppi.io",
+    "license": "MIT",
+    "keywords": ["framework", "user"],
+    "type": "library",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
