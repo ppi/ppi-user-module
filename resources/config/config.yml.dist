@@ -1,0 +1,4 @@
+auth:
+  client_id: xxxx
+  client_secret: xxxx
+  redirect_uri_route: UserAuth_Login

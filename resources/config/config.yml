@@ -1,0 +1,4 @@
+auth:
+  client_id: a97f317a5e61b9a27a77
+  client_secret: 623ec502f0cc76fcf600e83df4751bd0016ccd3d
+  redirect_uri_route: UserAuth_Login
