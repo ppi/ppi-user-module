@@ -3,7 +3,6 @@ namespace UserModule;
 
 use PPI\Module\Module as BaseModule;
 use PPI\Autoload;
-use League\OAuth2\Client\Provider\Github as GithubProvider;
 
 class Module extends BaseModule
 {
