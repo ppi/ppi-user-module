@@ -12,9 +12,6 @@ class Module extends BaseModule
     public function init($e)
     {
         Autoload::add(__NAMESPACE__, dirname(__DIR__));
-//        if(!defined('PHP_QUERY_RFC1738')) {
-//            define('PHP_QUERY_RFC1738', 1);
-//        }
     }
     
     /**
@@ -68,23 +65,8 @@ class Module extends BaseModule
                 $helper = new \UserModule\Classes\AccountHelper();
                 $helper->setUserStorage($sm->get('user.storage'));
                 return $helper;
-            },
-
-            'auth.service.provider' => function($sm) {
-                $config = $sm->get('config');
-
-                if(!isset($config['auth'])) {
-                    throw new \Exception('Missing auth config');
-                }
-
-                $authConfig   = $config['auth'];
-                $clientId     = $authConfig['client_id'];
-                $clientSecret = $authConfig['client_secret'];
-                $redirectUri  = $sm->get('router')->generate($authConfig['redirect_uri_route'], array(), true);
-                $provider = new GithubProvider(compact('clientId', 'clientSecret', 'redirectUri'));
-                return $provider;
             }
-            
+
         ));
     }
 

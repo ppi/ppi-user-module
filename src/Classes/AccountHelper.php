@@ -11,13 +11,14 @@ class AccountHelper
     protected $userStorage;
 
     public function __construct()
-    {}
-    
+    {
+    }
+
     public function setUserStorage($s)
     {
         $this->userStorage = $s;
     }
-    
+
     public function setUploadPath($path)
     {
         $this->uploadPath = $path;
@@ -30,7 +31,7 @@ class AccountHelper
 
     /**
      * Get a user by ID
-     * 
+     *
      * @param integer $id
      * @return object
      */
@@ -38,7 +39,7 @@ class AccountHelper
     {
         return $this->userStorage->getByID($id);
     }
-    
+
     /**
      * Delete a user and all their dependencies
      */
@@ -46,16 +47,16 @@ class AccountHelper
     {
         // Wipe the user record
         $this->userStorage->deleteByID($userID);
-        
+
         // Wipe data from meta data, gallery, music, video
         $this->userMetaStorage->deleteByUserID($userID);
 
     }
 
     /**
-     * Normalise a username, removing characters which are not a-z, 0-9, 
-     * 
-     * @param string  $string
+     * Normalise a username, removing characters which are not a-z, 0-9,
+     *
+     * @param string $string
      * @param boolean $lowerCase
      * @return mixed
      */
@@ -64,7 +65,7 @@ class AccountHelper
         $string = preg_replace("/[^A-Za-z0-9\._]/", '', $string);
         return $lowerCase ? strtolower($string) : $string;
     }
-    
+
     public function existsByEmail($email)
     {
         return $this->userStorage->existsByEmail($email);
@@ -89,5 +90,5 @@ class AccountHelper
     {
         return $this->userStorage->getByGithubUID($uid);
     }
-    
+
 }
