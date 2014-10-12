@@ -16,8 +16,8 @@
     },
     "autoload": {
         "psr-4": {
-            "PPI\\UserModule\\": "src/",
-            "PPI\\UserModule\\Tests\\": "tests"
+            "UserModule\\": "src/",
+            "UserModule\\Tests\\": "tests"
         }
     },
     "extra": {
