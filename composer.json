@@ -11,9 +11,14 @@
             "email": "paul@ppi.io"
         }
     ],
-    "target-dir": "modules/User",
     "require": {
         "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "PPI\\UserModule\\": "src/",
+            "PPI\\UserModule\\Tests\\": "tests"
+        }
     },
     "extra": {
         "branch-alias": {
