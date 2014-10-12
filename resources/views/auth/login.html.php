@@ -26,7 +26,7 @@
     </div>
 <?php endif; ?>
 
-<form action="<?= $view['router']->generate('User_Login_Check'); ?>" method="post" class="form-horizontal" role="form" id="validation-form">
+<form action="<?= $view['router']->generate('UserModule_Login_Check'); ?>" method="post" class="form-horizontal" role="form" id="validation-form">
 
     <div class="form-group">
         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email Address </label>
