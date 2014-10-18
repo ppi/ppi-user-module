@@ -18,7 +18,10 @@
         "psr-4": {
             "UserModule\\": "src/",
             "UserModule\\Tests\\": "tests"
-        }
+        },
+        "classmap": [
+            "./Module.php"
+        ]
     },
     "extra": {
         "branch-alias": {

@@ -2,15 +2,18 @@
 namespace UserModule;
 
 use PPI\Module\Module as BaseModule;
-use PPI\Autoload;
 
 class Module extends BaseModule
 {
-    protected $_moduleName = 'UserModule';
+    protected $name = 'UserModule';
+
+    public function __construct()
+    {
+        var_dump($this); exit;
+    }
 
     public function init($e)
     {
-        Autoload::add(__NAMESPACE__, dirname(__DIR__));
     }
     
     /**
@@ -20,7 +23,7 @@ class Module extends BaseModule
      */
     public function getConfig()
     {
-        return $this->loadConfig(__DIR__ . '/../resources/config/config.yml');
+        return $this->loadConfig(__DIR__ . '/src/resources/config/config.yml');
     }
 
     /**
@@ -30,7 +33,7 @@ class Module extends BaseModule
      */
     public function getRoutes()
     {
-        return $this->loadYamlRoutes(__DIR__ . '/../resources/config/routes.yml');
+        return $this->loadYamlRoutes(__DIR__ . '/src/resources/config/routes.yml');
     }
     
     public function getServiceConfig()
