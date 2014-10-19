@@ -9,7 +9,6 @@ class Module extends BaseModule
 
     public function __construct()
     {
-        var_dump($this); exit;
     }
 
     public function init($e)
