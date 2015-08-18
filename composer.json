@@ -12,7 +12,6 @@
         }
     ],
     "require": {
-        "ppi/framework": "dev-master",
         "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
     },
     "autoload": {
