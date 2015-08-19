@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "ppi/framework": "dev-develop",
+        "ppi/framework": "~2.1.0-alpha3",
         "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
     },
     "autoload": {
